@@ -60,3 +60,10 @@ a{
 body{
   padding-top:50px;
 }
+.stories{
+  text-align: center;
+  background-color:red;
+  padding-top:50px;
+  width:10px;
+  height: 50px;
+}

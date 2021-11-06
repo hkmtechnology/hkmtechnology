@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import Modal from "react-modal"
-import { Button, Navbar,Form,FormControl } from 'react-bootstrap'
+import { Button, Navbar,Form,FormControl,Col } from 'react-bootstrap'
 
 const customStyles = {
     content: {
@@ -41,15 +41,22 @@ const Nav = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Create new post</h2>
+{/*         <button onClick={closeModal}>close</button>
+        <div>I am a modal</div> */}
         <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
+          <Form.Control size="lg" type="text" placeholder="title" />
+           <br />
+          <Form.Control size="lg" type="text" placeholder="body" />
+          <Form.Group controlId="formFileLg" className="mb-3">
+          <Form.Label>Select photo/video</Form.Label>
+          <Form.Control type="file" size="lg" />
+          </Form.Group>
+          <Col sm={{ span: 0, offset: 5 }}>
+          <Button variant="primary" type="submit" size='sm'>
+            Submit
+          </Button>
+          </Col>
         </form>
     </Modal>
    {/*  <nav>
