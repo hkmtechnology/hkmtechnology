@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+// import {Header} from './components/Header'
+import Nav from './components/Nav';
+import { BrowserRouter,Route } from 'react-router-dom';
+import Home from './components/screens/Home';
+import Profile from './components/screens/Profile';
 
+/*
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+    <p>hi</p>
     </div>
+    <h1>welcome</h1>
+    <button onClick={test}>click here</button>
+    </>
   );
 }
 
 export default App;
+ */
+
+
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        {/* <Header name="hemanta" age='26'/> */}
+        <BrowserRouter>
+        <Nav />
+        <Route exact path="/" >
+            <Home />
+        </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
+        </BrowserRouter>
+      </div>
+    )
+  }
+}
+

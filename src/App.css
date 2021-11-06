@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+a{
+  color:black !important;
+}
+
+.posts{
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  max-width:600px;
+  max-height:00px;
+
+}
+
+.brand-logo{
+  font-family: 'Grand Hotel', cursive;
+  
+}
+
+body{
+  padding-top:50px;
 }
